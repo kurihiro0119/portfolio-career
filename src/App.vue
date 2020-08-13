@@ -1,56 +1,41 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+  <v-app id="inspire">
+        <Header/>
     <v-main>
-      <HelloWorld />
+      <v-container
+        fluid
+      >
+          <router-view/>
+      </v-container>
     </v-main>
+    <Footer/>
   </v-app>
 </template>
 
+<style lang="scss">
+.v-application--wrap{
+  background-color:#FBF7F1 !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Kameron:400,700|Noto+Sans+JP&display=swap');
+#inspire{
+  font-family: "Kameron", "Noto Sans JP", sans-serif !important;
+}
+</style>
+
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-export default {
-  name: "App",
-
-  components: {
-    HelloWorld
-  },
-
-  data: () => ({
-    //
-  })
-};
+  export default {
+    props: {
+      source: String,
+    },
+    components:{
+      Header,
+      Footer
+    },
+    data: () => ({
+    }),
+  }
 </script>
