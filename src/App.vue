@@ -13,8 +13,14 @@
 </template>
 
 <style lang="scss">
+.container{
+  max-width: none;
+}
 .v-application--wrap{
   background-color:#FBF7F1 !important;
+}
+.v-main{
+  padding-top: 0px !important;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Kameron:400,700|Noto+Sans+JP&display=swap');

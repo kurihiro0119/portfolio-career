@@ -14,13 +14,19 @@
                 </v-carousel>
             </v-col>
             <v-col cols="12" md="6">
-                <v-card class="mx-auto" height="100%"  color="#ece7e7">
-                    <v-card-text>
+                <v-card class="mx-auto" height="100%"  color="rgb(247 246 246)">
+
+                <v-card-text>
+                    <v-row>
+                    <v-col cols="6">
                         <p>Name</p>
                         <p class="information">
                             ・{{name}}
                         </p>
                         <v-divider></v-divider>
+                    </v-col>
+
+                    </v-row>
                         <p class="information">
                             ・ {{englishName}}
                         </p>
@@ -53,6 +59,20 @@
                                 <v-divider></v-divider>
                             </v-col>
                         </v-row>
+                        <v-row>
+                            <v-col cols="6">
+                                <div>職種は？</div>
+                                <div class="information">・{{occupation}}<br>
+                                </div>
+                                <v-divider></v-divider>
+                            </v-col>
+                            <v-col cols="6">
+                                <div>所属は？</div>
+                                <div class="information">・{{organization}}<br>
+                                </div>
+                                <v-divider></v-divider>
+                            </v-col>
+                        </v-row>
                     </v-card-text>
                     <v-card-actions>
                     </v-card-actions>
@@ -60,31 +80,9 @@
             </v-col>
         </v-row>
     </v-col>
-    <v-col cols="12" md="6">
-        <v-card class="mx-auto" height="auto" color="#ece7e7">
-            <v-card-text>
-                <div class="question">職種は？<br>
-                </div>
-                <v-divider></v-divider>
-                <div class="answer">・{{occupation}}<br>
-                </div>
-            </v-card-text>
-        </v-card>
-    </v-col>
-    <v-col cols="12" md="6">
-        <v-card class="mx-auto" height="auto" color="#ece7e7">
-            <v-card-text>
-                <div class="question">所属は？<br>
-                </div>
-                <v-divider></v-divider>
-                <div class="answer">・{{organization}}<br>
-                </div>
-            </v-card-text>
-        </v-card>
-    </v-col>
     <v-col cols="12">
       <router-link :to="{name: 'Career'}" class="link" >
-          <v-card class="mx-auto" height="auto" color="#ece7e7" v-on:click="change(item.text)">
+          <v-card class="mx-auto" height="auto" color="rgb(247 246 246)" v-on:click="change(item.text)">
             <v-card-text >
                 <div class="question">経歴は？
                         <br>
@@ -98,7 +96,7 @@
     </v-col>
     <v-col cols="12">
          <router-link :to="{name: 'Career'}" class="link" >
-            <v-card class="mx-auto" height="auto" color="#ece7e7">
+            <v-card class="mx-auto" height="auto" color="rgb(247 246 246)">
                 <v-card-text>
                     <div class="question">何したの？<br>
                     </div>
@@ -122,20 +120,20 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
 }
 
 .information {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $cBrack !important;
 }
 
 .question {
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $cBrack !important;
 }
 
 .answer {
     margin-top: 8px;
     margin-bottom: 8px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: $cBrack !important;
 }
 
@@ -148,6 +146,11 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
 img {
     background-color: gray;
     object-fit: contain;
+}
+
+.profile-img{
+    max-height: 100px;
+    max-width: 100px;
 }
 
 .summary {
@@ -208,17 +211,8 @@ export default {
             sex: "Man",
             occupation: "Azure Support Enginner!",
             organization: "日本マイクロソフト",
-            // carrer:"a",
-            // summary:"b",
-            carrer: `2017年4月〜2020年4月 日立製作所 SE
-2020年5月〜現在 日本マイクロソフト サポートエンジニア`,
-            summary: `日立では工場向けのwebアプリケーションやシステムの開発をしていました。
-・工場設備の故障をリアルタイムで予兆するWebアプリ　
-・工場現場の業務データをクレンジングし、一元管理するシステム
-・現場データを編集するWebアプリ
-
-マイクロソフトでは、azureの技術サポートをしています。
-・担当製品 Azure Monitor `,
+            carrer:"a",
+            summary:"b",
             slides: [{
                     src: '/img/troupe.jpg',
                     text: '1'

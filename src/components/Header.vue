@@ -34,10 +34,13 @@
         style="width: 100%"
         class="ml-0 pl-4"
       >
-        <span class="header-title" >{{theme}}</span>
+        <span class="header-title" >My Career</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
+    <v-container-img>
+        <v-img src="/img/backpicture.jpg" aspect-ratio="1.7" class="header-img"></v-img>
+    </v-container-img>
   </v-container>
 </template>
 
@@ -49,16 +52,25 @@ a{
     text-decoration: none;
 }
 .header-title{
-  font-size :2rem;
+  font-size :1.5rem;
 }
 .item-text{
   font-size: 1rem !important;
     line-height: 1.2rem !important;
 }
 
+.header-img{
+  max-height: 200px !important;
+}
+
+@media (min-width: 960px) {
+  .header-img{
+    max-height: 300px !important;
+  }
+}
 @media (min-width: 960px) {
 .header-title{
-  font-size :3rem;
+  font-size :2rem;
 }
 }
 </style>
@@ -75,7 +87,7 @@ export default {
       items: [
         {path:'BasicInfo',  text: '基本情報' },
         {path:'Career',  text: '経歴' },
-        {path:'', text: 'スキル' },
+        {path:'Skill', text: 'スキル' },
         {path:'',  text: 'ポートフォリオ' },
         {path:'',  text: 'QiitA' },
         {path:'',  text: '学歴' },
