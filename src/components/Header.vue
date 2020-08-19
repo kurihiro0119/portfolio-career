@@ -85,15 +85,9 @@ export default {
       dialog: false,
       drawer: null,
       items: [
-        {path:'BasicInfo',  text: '基本情報' },
-        {path:'Career',  text: '経歴' },
-        {path:'Skill', text: 'スキル' },
-        {path:'',  text: 'ポートフォリオ' },
-        {path:'',  text: 'QiitA' },
-        {path:'',  text: '学歴' },
-        {path:'',  text: '資格' },
-        {path:'',  text: '語彙力' },
-        {path:'',  text: '特記事項' },
+        {path:'BasicInfo',  text: 'Information' },
+        {path:'Career',  text: 'Career' },
+        {path:'Skill', text: 'Skill' },
       ],
     }
   },

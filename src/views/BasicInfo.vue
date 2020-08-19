@@ -1,5 +1,10 @@
 <template>
 <v-row class="profile-container">
+    <div class="profile-header">
+        <div class="profile-header-text">
+        <h1>Profile</h1>
+        </div>
+    </div>
     <v-col cols="12">
         <v-row class="profile-container__inner">
             <v-col cols="12" md="6" class="">
@@ -14,98 +19,19 @@
                 </v-carousel>
             </v-col>
             <v-col cols="12" md="6">
-                <v-card class="mx-auto" height="100%"  color="rgb(247 246 246)">
-
-                <v-card-text>
-                    <v-row>
-                    <v-col cols="6">
-                        <p>Name</p>
+                <div class="mx-auto" height="100%"  color="rgb(247 246 246)">
                         <p class="information">
-                            ・{{name}}
+                            {{englishName}}
                         </p>
-                        <v-divider></v-divider>
-                    </v-col>
-
-                    </v-row>
                         <p class="information">
-                            ・ {{englishName}}
+                            はじめまして。栗原啓成と申します。<br>
+                            社会人歴（IT業界）4年目です。<br>
+                            新卒では日立製作所に入社し、大規模Webサービスの保守運用を経験した後、
                         </p>
-                        <v-divider></v-divider>
-                        <v-row>
-                            <v-col cols="6">
-                                <div>Birth</div>
-                                <div class="information">・{{birth}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                            <v-col cols="6">
-                                <div>Age</div>
-                                <div class="information">・{{age}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                        </v-row>
-                        <v-row>
-                            <v-col cols="6">
-                                <div>Address</div>
-                                <div class="information">・{{address}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                            <v-col cols="6">
-                                <div>Sex</div>
-                                <div class="information">・{{sex}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                        </v-row>
-                        <v-row>
-                            <v-col cols="6">
-                                <div>職種は？</div>
-                                <div class="information">・{{occupation}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                            <v-col cols="6">
-                                <div>所属は？</div>
-                                <div class="information">・{{organization}}<br>
-                                </div>
-                                <v-divider></v-divider>
-                            </v-col>
-                        </v-row>
-                    </v-card-text>
-                    <v-card-actions>
-                    </v-card-actions>
-                </v-card>
+
+                </div>
             </v-col>
         </v-row>
-    </v-col>
-    <v-col cols="12">
-      <router-link :to="{name: 'Career'}" class="link" >
-          <v-card class="mx-auto" height="auto" color="rgb(247 246 246)" v-on:click="change(item.text)">
-            <v-card-text >
-                <div class="question">経歴は？
-                        <br>
-                </div>
-                <v-divider></v-divider>
-                       <div class="summary__text">{{carrer}}<br>
-                        </div>
-            </v-card-text>
-        </v-card>
-        </router-link>
-    </v-col>
-    <v-col cols="12">
-         <router-link :to="{name: 'Career'}" class="link" >
-            <v-card class="mx-auto" height="auto" color="rgb(247 246 246)">
-                <v-card-text>
-                    <div class="question">何したの？<br>
-                    </div>
-                    <v-divider></v-divider>
-                    <div class="summary__text">{{summary}}<br>
-                    </div>
-             </v-card-text>
-            </v-card>
-         </router-link>
     </v-col>
 </v-row>
 </template>
@@ -114,6 +40,18 @@
 $cBrack:rgba(0, 0, 0, 0.87);
 $cDarkRed:rgba(105, 31, 31, 0.87);
 
+.profile-header{
+    width: 100%;
+    background-color: $cDarkRed;
+    color: white;
+    position: relative;
+}
+.profile-header-text{
+    margin-left: 5px;
+}
+// .profile-container__inner{
+//     background-color: white;
+// }
 .v-application p {
     margin-top: 8px;
     margin-bottom: 8px;

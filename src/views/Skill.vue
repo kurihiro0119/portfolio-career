@@ -1,37 +1,55 @@
 <template>
-  <v-container>
-    <div class="programing-skill">
-      <v-row>
-        <v-col cols="12" md="4" class="programing-skill-thema">
-          <h3>
-            programing skill
-          </h3>
-        </v-col>
-        <v-col cols="12" md="8" class="programing-skill-list">
-              <h3>html</h3>
-                  <v-rating
-                  v-model="rating"
-                background-color="green lighten-3"
-                color="green"
-                large
-                 ></v-rating>
-        </v-col>
-
-      </v-row>
+<v-row class="skill-container">
+  <div class="skill-header">
+    <div class="skill-header-text">
+     <h1>Skill</h1>
     </div>
-  </v-container>
+  </div>
+  <div class="skill-content">
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Calories</th>
+            <th class="text-left">Calories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in desserts" :key="item.name">
+            <td>{{ item.name }}</td>
+            <td>{{ item.calories }}</td>
+            <td>{{ item.calories }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+
+  </div>
+</v-row>
 </template>
 
 <style lang="scss">
-.programing-skill{
-background-color: #666;
+$cBrack:rgba(0, 0, 0, 0.87);
+$cDarkRed:rgba(105, 31, 31, 0.87);
+
+.skill-header{
+    width: 100%;
+    background-color: $cDarkRed;
     color: white;
     position: relative;
+    margin-bottom: 10px;
 }
-.programing-skill-thema{
-  text-align: left;
-  margin-left: 5px;
-    border-bottom: 1px solid #e5e5e5!important;
+
+.skill-header-text{
+    margin-left: 5px;
+}
+
+.skill-content{
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 30px;
+    width: 100%;
 }
 @media(min-width: 480px){
   .programing-skill-thema{
@@ -44,9 +62,52 @@ background-color: #666;
 </style>
 <script>
 export default {
-  name: "HelloWorld",
+  data (){
+    return{
 
-  data: () => ({
-  })
+      desserts: [
+        {
+          name: 'Frozen Yogurt',
+          calories: 159,
+        },
+        {
+          name: 'Ice cream sandwich',
+          calories: 237,
+        },
+        {
+          name: 'Eclair',
+          calories: 262,
+        },
+        {
+          name: 'Cupcake',
+          calories: 305,
+        },
+        {
+          name: 'Gingerbread',
+          calories: 356,
+        },
+        {
+          name: 'Jelly bean',
+          calories: 375,
+        },
+        {
+          name: 'Lollipop',
+          calories: 392,
+        },
+        {
+          name: 'Honeycomb',
+          calories: 408,
+        },
+        {
+          name: 'Donut',
+          calories: 452,
+        },
+        {
+          name: 'KitKat',
+          calories: 518,
+        },
+      ],
+    }
+  },
 };
 </script>

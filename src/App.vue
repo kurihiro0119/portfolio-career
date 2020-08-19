@@ -5,7 +5,9 @@
       <v-container
         fluid
       >
-          <router-view/>
+          <BasicInfo/>
+          <Skill/>
+          <History/>
       </v-container>
     </v-main>
     <Footer/>
@@ -13,6 +15,7 @@
 </template>
 
 <style lang="scss">
+
 .container{
   max-width: none;
 }
@@ -32,6 +35,9 @@
 <script>
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BasicInfo from './views/BasicInfo';
+import Skill from './views/Skill';
+import History from './views/History';
 
   export default {
     props: {
@@ -39,7 +45,10 @@ import Footer from './components/Footer';
     },
     components:{
       Header,
-      Footer
+      Footer,
+      BasicInfo,
+      Skill,
+      History
     },
     data: () => ({
     }),
