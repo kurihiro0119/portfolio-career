@@ -4,7 +4,7 @@
     <div class="skill-header-text">
      <h1>Skill</h1>
     </div>
-  </div>
+  </div >
   <div class="skill-content">
     <v-simple-table>
       <template v-slot:default>

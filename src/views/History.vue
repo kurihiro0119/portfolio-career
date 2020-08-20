@@ -5,38 +5,33 @@
      <h1>History</h1>
     </div>
   </div>
-  <div class="explain">
-    <h2>学歴・職歴</h2>
-    <ul class="timeline">
-      <li>
-        <p class="timeline-date">現在</p>
-        <div class="timeline-content">
-          <h3>日本マイクロソフト入社</h3>
-          <p>Azure のサポートエンジニア</p>
-        </div>
-      </li>
-      <li>
-        <p class="timeline-date">2020年4月</p>
-        <div class="timeline-content">
-          <h3>日立製作所退社</h3>
-          <p>退社</p>
-        </div>
-      </li>
-      <li>
-        <p class="timeline-date">2020年4月</p>
-        <div class="timeline-content">
-          <h3>日立製作所退社</h3>
-          <p>退社</p>
-        </div>
-      </li>
-      <li>
-        <p class="timeline-date">2020年4月</p>
-        <div class="timeline-content">
-          <h3>日立製作所退社</h3>
-          <p>退社</p>
-        </div>
-      </li>
-    </ul>
+  <div class="history-container">
+    <h2 class="timeline-thema">学歴・職歴</h2>
+    <v-timeline
+      :align-top="alignTop"
+      :dense="dense"
+      :reverse="reverse"
+    >
+      <v-timeline-item
+        v-for="time in timeline"
+        :key="time"
+        :fill-dot="fillDot"
+        :hide-dot="hideDot"
+        :color="color"
+        :left="left"
+        :right="right"
+        :small="small"
+      >
+          <h3 class="headline">{{time.date}}</h3>
+            <h4 class="timeline-text">
+            {{time.text}}
+            </h4>
+            <h4 v-if="!(time.skill === '')"  class="timeline-text">
+              使用スキル：{{time.skill}}
+            </h4>
+
+      </v-timeline-item>
+    </v-timeline>
   </div>
 </v-row>
 </template>
@@ -45,24 +40,6 @@
 $cBrack:rgba(0, 0, 0, 0.87);
 $cDarkRed:rgba(105, 31, 31, 0.87);
 
-ul{
-  list-style: none;
-}
-li{
-  width: 100%;
-}
-.timeline li {
-    overflow: hidden;
-    margin: 0;
-    position: relative;
-}
-.timeline p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 .timeline-header{
     width: 100%;
     background-color: $cDarkRed;
@@ -70,44 +47,61 @@ li{
     position: relative;
     margin-bottom: 10px;
 }
-.timeline-date{
-  font-size: 1rem;
- }
+.timeline-thema{
+  margin: 8px;
+  padding-left: 8px;
+}
 
 .timeline-header-text{
     margin-left: 5px;
 }
-.explain {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding: 30px;
-    width: 100%;
-    background-color: #efe6e6;
+.v-timeline:before {
+    width: 4px !important;
+    background-color: black !important;
 }
-@media (min-width: 760px){
-.timeline-date{
-  font-size: 1.2rem;
-    width: 110px;
-    float: left;
-    margin-top: 20px !important;
-  }
+.timeline-text{
+  margin: 6px;
 }
-@media (min-width: 768px){
-.timeline-content {
-    width: 75%;
-    float: left;
-    border-left: solid 3px black;
-    padding-left: 30px;
-  }
+.history-container{
+  width: 100%;
 }
-
 </style>
 
 <script>
 export default {
   name: "HelloWorld",
 
-  data: () => ({
-  })
+  data() {
+    return{
+    alignTop: false,
+    avatar: false,
+    dense: true,
+    fillDot: true,
+    hideDot: true,
+    icon: false,
+    color: "rgb(60, 6, 4)",
+    left: false,
+    reverse: false,
+    right: false,
+    small: true,
+    timeline:[
+      {
+        date:'2020年5月〜現在',
+        text:'マイクロソフト CSSサポート',
+        skill:''
+      },
+      {
+        date:'2020年4月',
+        text:'日立製作所退社',
+        skill:''
+      },
+      {
+        date:'2019年4月〜2020年4月',
+        text:'工場向けデータ一元管理システムの開発',
+        skill:'Vue.js, elemental-ui'
+      },
+    ]
+    }
+  }
 };
 </script>
