@@ -62,8 +62,11 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
 .timeline-text{
   margin: 6px;
 }
-.history-container{
-  width: 100%;
+
+.history-container {
+    width: 100%;
+    margin: 10px;
+    background-color: #ece5e5;
 }
 </style>
 
