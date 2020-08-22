@@ -22,7 +22,7 @@
         :right="right"
         :small="small"
       >
-          <h3 class="headline">{{time.date}}</h3>
+          <div class="headline">{{time.date}}</div>
             <h4 class="timeline-text">
             {{time.text}}
             </h4>
@@ -50,6 +50,15 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
 .timeline-thema{
   margin: 8px;
   padding-left: 8px;
+}
+
+.v-application .headline {
+    font-size: 1rem !important;
+}
+@media(min-width: 480px){
+ .v-application .headline {
+    font-size: 1.3rem !important;
+} 
 }
 
 .timeline-header-text{
