@@ -9,9 +9,9 @@
     <v-row class="work-list">
         <v-col v-for="work in works" :key="work" cols="12" sm="6" md="4" class="padding0">
         <v-card color="#ece3e34f" class="work-list-card" height="100%">
-        <v-img 
+        <v-img
         v-if="!(work.src === '')"
-        v-bind:src="work.src" aspect-ratio="1" contain=True max-height="200px" 
+        v-bind:src="work.src" aspect-ratio="1" contain=True max-height="200px"
         ></v-img>
          <v-card-text>
              説明：{{work.detail}}
