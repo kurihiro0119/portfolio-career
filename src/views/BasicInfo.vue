@@ -25,9 +25,7 @@
                         {{englishName}}
                     </p>
                     <p class="information">
-                        はじめまして。栗原啓成と申します。<br>
-                        社会人歴（IT業界）4年目です。<br>
-                        新卒では日立製作所に入社し、大規模Webサービスの保守運用を経験した後、
+                        {{information}}
                     </p>
 
                 </div>
@@ -91,16 +89,8 @@ export default {
     data() {
         return {
             hover: false,
-            name: "栗原 啓成",
             englishName: "Kurihara Hironari",
-            birth: "1992/1/19",
-            age: "28",
-            address: "Tokyo",
-            sex: "Man",
-            occupation: "Azure Support Enginner!",
-            organization: "日本マイクロソフト",
-            carrer: "a",
-            summary: "b",
+            information:"はじめまして栗原と申します",
             slides: [{
                     src: '/img/troupe.jpg',
                     text: '1'
