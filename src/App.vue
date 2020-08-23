@@ -8,6 +8,7 @@
           <BasicInfo/>
           <Skill/>
           <History/>
+          <Works/>
       </v-container>
     </v-main>
     <Footer/>
@@ -38,6 +39,7 @@ import Footer from './components/Footer';
 import BasicInfo from './views/BasicInfo';
 import Skill from './views/Skill';
 import History from './views/History';
+import Works from './views/Works';
 
   export default {
     props: {
@@ -48,7 +50,8 @@ import History from './views/History';
       Footer,
       BasicInfo,
       Skill,
-      History
+      History,
+      Works
     },
     data: () => ({
     }),

@@ -51,7 +51,13 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
   margin: 8px;
   padding-left: 8px;
 }
+.history-container {
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 20px;
+    background-color: #ece3e34f ;
 
+}
 .v-application .headline {
     font-size: 1rem !important;
 }
@@ -67,16 +73,26 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
 .v-timeline:before {
     width: 4px !important;
     background-color: black !important;
+    // content: none !important;
 }
 .timeline-text{
   margin: 6px;
 }
 
-.history-container {
-    width: 100%;
-    margin: 10px;
-    background-color: #ece5e5;
+.v-timeline-item {
+    padding-bottom: 6px !important;
 }
+
+@media(min-width: 460){
+.v-timeline-item {
+    padding-bottom: 24px !important;
+}
+
+.history-container {
+    background-color: #ece3e34f ;
+}
+}
+
 </style>
 
 <script>
