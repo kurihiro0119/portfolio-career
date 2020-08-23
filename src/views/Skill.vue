@@ -37,11 +37,11 @@
     </v-simple-table>
     <h2>Sub</h2>
     <div class="subskill">
-    <nobr v-for="skill in subskill" :key="skill" class="skill-text-size-sub">{{skill}}  </nobr>
+    <div v-for="skill in subskill" :key="skill" class="skill-text-size-sub">{{skill}}  </div>
     </div>
     <h2>資格</h2>
     <div class="qualification">
-    <nobr v-for="qualification in qualifications" :key="qualification" class="skill-text-size-qualification">{{qualification}}  </nobr>
+    <div v-for="qualification in qualifications" :key="qualification" class="skill-text-size-qualification">{{qualification}}  </div>
     </div>
   </div>
 </v-row>
@@ -75,9 +75,11 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
     font-size:0.8rem !important;
     &-sub{
       font-size: 0.8rem;
+      display: inline;
     }
     &-qualification{
       font-size: 0.8rem;
+      display: inline;
     }
     
 }
@@ -178,6 +180,15 @@ export default {
         "Apache",
         "Tomcat",
         "nginx",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
+        "firebase",
         "firebase",
       ],
       qualifications:[
