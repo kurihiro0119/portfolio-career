@@ -13,11 +13,9 @@
             link
           >
             <v-list-item-content>
-              <router-link :to="{name: item.path}" >
-              <v-list-item-title v-on:click="change(item.text)" class="item-text">
+              <v-list-item-title class="item-text" @click="$vuetify.goTo(item.path, options)">
                 {{ item.text }}
               </v-list-item-title>
-              </router-link>
             </v-list-item-content>
           </v-list-item>
         </template>
@@ -85,9 +83,10 @@ export default {
       dialog: false,
       drawer: null,
       items: [
-        {path:'BasicInfo',  text: 'Information' },
-        {path:'Career',  text: 'Career' },
-        {path:'Skill', text: 'Skill' },
+        {path:'#Profile',  text: 'Profile' },
+        {path:'#Skill',  text: 'Skill' },
+        {path:'#History', text: 'History' },
+        {path:'#Work', text: 'Work' },
       ],
     }
   },

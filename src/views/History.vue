@@ -2,6 +2,7 @@
 <v-row class="timeline-container">
   <div class="timeline-header">
     <div class="timeline-header-text">
+    <a id="History"></a>
      <h1>History</h1>
     </div>
   </div>
@@ -55,8 +56,6 @@ $cDarkRed:rgba(105, 31, 31, 0.87);
     width: 100%;
     margin: 10px;
     margin-bottom: 20px;
-    background-color: #ece3e34f ;
-
 }
 .v-application .headline {
     font-size: 1rem !important;
@@ -115,17 +114,17 @@ export default {
     timeline:[
       {
         date:'2020年5月〜現在',
-        text:'マイクロソフト CSSサポート',
+        text:'XXXXXXXXXX',
         skill:''
       },
       {
         date:'2020年4月',
-        text:'日立製作所退社',
+        text:'XXXXXXXX',
         skill:''
       },
       {
         date:'2019年4月〜2020年4月',
-        text:'工場向けデータ一元管理システムの開発',
+        text:'XXXXXXXXXXXX',
         skill:'Vue.js, elemental-ui'
       },
     ]
