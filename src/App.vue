@@ -5,7 +5,7 @@
       <v-container
         fluid
       >
-          <BasicInfo/>
+          <Profile/>
           <Skill/>
           <History/>
           <Works/>
@@ -36,7 +36,7 @@
 <script>
 import Header from './components/Header';
 import Footer from './components/Footer';
-import BasicInfo from './views/BasicInfo';
+import Profile from './views/Profile';
 import Skill from './views/Skill';
 import History from './views/History';
 import Works from './views/Works';
@@ -48,7 +48,7 @@ import Works from './views/Works';
     components:{
       Header,
       Footer,
-      BasicInfo,
+      Profile,
       Skill,
       History,
       Works
