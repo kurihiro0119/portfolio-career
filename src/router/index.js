@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import BasicInfo from "../views/BasicInfo.vue";
+import Profile from "../views/Profile.vue";
 import Skill from "../views/Skill.vue";
 
 Vue.use(VueRouter);
@@ -8,13 +8,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "BasicInfo",
-    component: BasicInfo
+    name: "Profile",
+    component: Profile
   },
   {
-    path: "/basicinfo",
-    name: "BasicInfo",
-    component: BasicInfo
+    path: "/Profile",
+    name: "Profile",
+    component: Profile
   },
   {
     path: "/skill",
